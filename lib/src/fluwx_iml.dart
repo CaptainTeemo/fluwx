@@ -31,6 +31,7 @@ const Map<Type, String> _shareModelMethodMapper = {
   WeChatShareWebPageModel: 'shareWebPage',
   WeChatShareMiniProgramModel: 'shareMiniProgram',
   WeChatShareFileModel: 'shareFile',
+  WechatShareEmoticonModel: 'shareEmoticon'
 };
 
 MethodChannel _channel = MethodChannel('com.jarvanmo/fluwx')
