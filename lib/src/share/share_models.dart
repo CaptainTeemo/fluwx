@@ -28,6 +28,7 @@ const String _mediaTagName = "mediaTagName";
 const String _messageAction = "messageAction";
 const String _compressThumbnail = "compressThumbnail";
 const String _msgSignature = "msgSignature";
+const String _emoticonData = "emoticonData";
 
 mixin WeChatShareBaseModel {
   Map toMap();
@@ -355,6 +356,25 @@ class WeChatShareFileModel implements WeChatShareBaseModel {
       _messageAction: messageAction,
       _mediaTagName: mediaTagName,
       _compressThumbnail: compressThumbnail,
+      _msgSignature: msgSignature
+    };
+  }
+}
+
+class WechatShareEmoticonModel implements WeChatShareBaseModel {
+  WechatShareEmoticonModel(this.emoticon,
+      {this.thumbnail, this.scene = WeChatScene.SESSION, this.msgSignature});
+
+  final WeChatImage emoticon;
+  final WeChatImage? thumbnail;
+  final WeChatScene scene;
+  final String? msgSignature;
+  @override
+  Map toMap() {
+    return {
+      _scene: scene.index,
+      _emoticonData: emoticon,
+      _thumbnail: thumbnail?.toMap(),
       _msgSignature: msgSignature
     };
   }
