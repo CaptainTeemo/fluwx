@@ -373,7 +373,7 @@ class WechatShareEmoticonModel implements WeChatShareBaseModel {
   Map toMap() {
     return {
       _scene: scene.index,
-      _emoticonData: emoticon,
+      _emoticonData: emoticon.toMap(),
       _thumbnail: thumbnail?.toMap(),
       _msgSignature: msgSignature
     };
