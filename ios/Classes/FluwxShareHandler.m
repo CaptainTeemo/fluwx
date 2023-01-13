@@ -33,7 +33,7 @@ NSString *const fluwxKeyCompressThumbnail = @"compressThumbnail";
 NSString *const keySource = @"source";
 NSString *const keySuffix = @"suffix";
 
-NSString *const keyEmoticon = @"emoticon";
+NSString *const keyEmoticon = @"emoticonData";
 
 CGFloat thumbnailWidth;
 
